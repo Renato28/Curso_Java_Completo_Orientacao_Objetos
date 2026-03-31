@@ -1,3 +1,5 @@
+package exercicios;
+
 import java.util.Locale;
 
 public class ExercicioFixacao {
