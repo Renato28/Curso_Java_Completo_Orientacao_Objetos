@@ -1,3 +1,5 @@
+package aula;
+
 import java.util.Locale;
 
 public class AulaSobreSaidaDeDados {
