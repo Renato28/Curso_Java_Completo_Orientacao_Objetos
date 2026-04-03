@@ -1,0 +1,21 @@
+package exercicios;
+
+import java.util.Scanner;
+
+public class ExercicioProposto01 {
+
+    static void main() {
+
+        Scanner entrada = new Scanner(System.in);
+        int senha = entrada.nextInt();
+
+        while (senha != 2002) {
+            System.out.println("Senha Inválida");
+            senha =  entrada.nextInt();
+        }
+
+        System.out.println("Acesso permitido");
+
+        entrada.close();
+    }
+}
