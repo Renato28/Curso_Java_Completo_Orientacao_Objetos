@@ -7,27 +7,21 @@ public class ExercicioProposto05 {
     static void main() {
 
         Scanner entrada = new Scanner(System.in);
+        int n = entrada.nextInt();
 
-        int x =  entrada.nextInt();
-        int y = entrada.nextInt();
+        int in = 0;
+        int out = 0;
 
-        int min, max;
-        if (x < y) {
-            min = x;
-            max = y;
-        } else {
-            min = y;
-            max = x;
-        }
-
-        int soma = 0;
-        for (int i = min + 1; i < max; i++) {
-            if (i % 2 != 0) {
-                soma = soma + i;
+        for (int i = 0; i < n; i++) {
+            int x = entrada.nextInt();
+            if (x >= 10 && x <= 20) {
+                in = in + 1;
+            } else {
+                out = out + 1;
             }
         }
-
-        System.out.println(soma);
+        System.out.println(in + " " + "in");
+        System.out.println(out + " " + "out");
 
         entrada.close();
     }
