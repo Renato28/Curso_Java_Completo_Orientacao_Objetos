@@ -24,7 +24,10 @@ public class Program {
 
         System.out.println("Product data: " + product);
 
-        System.out.println();
+        product.setName("Computer");
+        System.out.println("Updated name: " + product.getName());
+        product.setPrice(price);
+        System.out.println("Updated price: " + product.getPrice());
         System.out.print("Enter the number of products to be added in stock: ");
         int quantity = sc.nextInt();
         product.addProducts(quantity);
