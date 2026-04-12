@@ -14,10 +14,14 @@ public class Program {
         int n = sc.nextInt();
         List<Employee> employees = new ArrayList<>();
 
-        for (int i = 1; i <= n; i++) {
-            System.out.println("Employee #" + i + ": ");
+        for (int i = 0; i < n; i++) {
+            System.out.println("Employee #" + (i + 1) + ": ");
             System.out.print("Id: ");
             int id = sc.nextInt();
+            while (hasId(employees, id)) {
+                System.out.println("Id already taken! Try again: ");
+                id = sc.nextInt();
+            }
             System.out.print("Name: ");
             String name = sc.next();
             sc.nextLine();
@@ -28,6 +32,7 @@ public class Program {
 
         System.out.print("Enter the employee id that will have salary increase: ");
         int id = sc.nextInt();
+//        Integer pos = position(employees, id);
         Employee e = employees
                 .stream()
                 .filter(integer -> integer.getId() == id)
@@ -37,6 +42,7 @@ public class Program {
         } else {
             System.out.print("Enter the percentage: ");
             double percentage = sc.nextDouble();
+//            employees.get(pos).increaseSalary(percentage);
             e.increaseSalary(percentage);
         }
 
@@ -47,5 +53,22 @@ public class Program {
         }
 
         sc.close();
+    }
+
+    private static Integer position(List<Employee> employees, int id) {
+        for (int i = 0; i < employees.size(); i++) {
+            if (employees.get(i).getId() == id) {
+                return i;
+            }
+        }
+        return null;
+    }
+
+    public static boolean hasId(List<Employee> employees, int id) {
+        Employee emp = employees.stream()
+                .filter(e -> e.getId() == id)
+                .findFirst()
+                .orElse(null);
+        return emp != null;
     }
 }
