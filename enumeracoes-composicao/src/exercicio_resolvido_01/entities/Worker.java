@@ -1,4 +1,4 @@
-package exercicio_resolvido.entities;
+package exercicio_resolvido_01.entities;
 
 import java.util.ArrayList;
 import java.util.List;
