@@ -1,4 +1,4 @@
-package exercicio_fixacao.entities;
+package exercicio_resolvido.entities;
 
 public class OutsourcedEmployee extends Employee {
 
