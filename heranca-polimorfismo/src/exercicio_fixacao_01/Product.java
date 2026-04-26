@@ -1,4 +1,4 @@
-package exercicio_fixacao;
+package exercicio_fixacao_01;
 
 public class Product {
 
