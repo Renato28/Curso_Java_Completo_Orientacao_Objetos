@@ -1,4 +1,4 @@
-package sem_interface.model.entities;
+package com_interface.model.entities;
 
 public class Invoice {
 
@@ -6,7 +6,6 @@ public class Invoice {
     private Double tax;
 
     public Invoice() {
-
     }
 
     public Invoice(Double basicPayment, Double tax) {
@@ -33,5 +32,4 @@ public class Invoice {
     public Double getTotalPayment() {
         return getBasicPayment() + getTax();
     }
-
 }
